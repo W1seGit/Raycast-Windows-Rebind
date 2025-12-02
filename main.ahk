@@ -60,10 +60,18 @@ Tab::Send("#Tab")       ; Task View
 
 
 ; Arrow keys for window snapping
-Left::Send("#Left")
-Right::Send("#Right")
-Up::Send("#Up")
-Down::Send("#Down")
+Left::{
+    Send("{Blind}{LWin down}{Left}{LWin up}")
+}
+Right::{
+    Send("{Blind}{LWin down}{Right}{LWin up}")
+}
+Up::{
+    Send("{Blind}{LWin down}{Up}{LWin up}")
+}
+Down::{
+    Send("{Blind}{LWin down}{Down}{LWin up}")
+}
 
 
 ; Number keys for taskbar apps
@@ -81,14 +89,22 @@ Down::Send("#Down")
 
 ; With Shift
 +s::Send("#+s")         ; Screenshot (Snipping Tool)
-+Left::Send("#+Left")   ; Move window to other monitor
-+Right::Send("#+Right")
++Left::{
+    Send("{Blind}{LWin down}{Shift down}{Left}{Shift up}{LWin up}")
+}
++Right::{
+    Send("{Blind}{LWin down}{Shift down}{Right}{Shift up}{LWin up}")
+}
 
 
 ; With Ctrl
 ^d::Send("#^d")         ; New virtual desktop
-^Left::Send("#^Left")   ; Switch desktop left
-^Right::Send("#^Right") ; Switch desktop right
+^Left::{
+    Send("{Blind}{LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}")
+}
+^Right::{
+    Send("{Blind}{LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}")
+}
 ^F4::Send("#^F4")       ; Close virtual desktop
 
 
