@@ -32,7 +32,7 @@ A simple AutoHotkey v2 script that remaps the Windows key to open Raycast (Alt+S
 
 ### Option 1: Download Executable (Recommended)
 
-1. Go to the [Releases](https://github.com/YOUR_USERNAME/Raycast-Windows-Rebind/releases) page
+1. Go to the [Releases](https://github.com/W1seGit/Raycast-Windows-Rebind/releases) page
 2. Download `RaycastRebind.exe`
 3. Run it!
 
