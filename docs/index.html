@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raycast Windows Rebind</title>
+    <style>
+        :root {
+            --bg: #0a0a0f;
+            --fg: #ececf1;
+            --accent: #ff6b35;
+            --border: #333;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+            line-height: 1.6;
+            margin: 0;
+            padding: 4rem 2rem;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 0.5rem;
+            letter-spacing: -0.03em;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #888;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+        }
+
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 4rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+        .btn:hover { text-decoration: none; opacity: 0.9; }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #222;
+            color: var(--fg);
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        ul, ol {
+            padding-left: 1.2rem;
+            color: #ccc;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        code {
+            background: #1e1e24;
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 0.9em;
+            color: #fff;
+        }
+
+        kbd {
+            background: #222;
+            border: 1px solid #444;
+            border-radius: 4px;
+            padding: 0.1em 0.4em;
+            font-family: inherit;
+            font-size: 0.85em;
+            color: #eee;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Raycast Windows Rebind</h1>
+        <p class="subtitle">Remap the Windows key to open Raycast instantly, without losing your shortcuts.</p>
+        
+        <div class="actions">
+            <a href="https://github.com/YOUR_USERNAME/Raycast-Windows-Rebind/releases/latest" class="btn btn-primary">Download .exe</a>
+            <a href="https://github.com/YOUR_USERNAME/Raycast-Windows-Rebind" class="btn btn-secondary">View on GitHub</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>How it works</h2>
+        <ul>
+            <li>Press <kbd>Win</kbd> alone to open Raycast (triggers <kbd>Alt</kbd>+<kbd>Space</kbd>).</li>
+            <li>Press <kbd>Win</kbd> + <kbd>E</kbd>, <kbd>Win</kbd> + <kbd>Tab</kbd>, etc. for normal Windows shortcuts.</li>
+            <li>Zero config required. Runs silently in the tray.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Installation</h2>
+        <ol>
+            <li>Download <strong>RaycastRebind.exe</strong>.</li>
+            <li>Run it. (A tray icon will appear).</li>
+            <li>To run on startup: Press <kbd>Win</kbd>+<kbd>R</kbd>, type <code>shell:startup</code>, and paste a shortcut to the exe there.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Customization</h2>
+        <p>The default hotkey sent is <code>Alt+Space</code>. To change it:</p>
+        <ol>
+            <li>Edit <code>main.ahk</code>.</li>
+            <li>Change <code>LAUNCHER_HOTKEY := "!{Space}"</code>.</li>
+            <li>Recompile or run with AutoHotkey v2.</li>
+        </ol>
+    </section>
+
+    <footer>
+        <p>MIT License • <a href="https://github.com/YOUR_USERNAME/Raycast-Windows-Rebind">GitHub</a></p>
+    </footer>
+</body>
+</html>
